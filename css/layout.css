@@ -4,12 +4,16 @@ body {
     grid-template-rows: 1fr max-content;
     grid-template-areas:
         "sidebar main"
-        "sidebar footer";
+        "sidebar main";
     height: 100vh;
+    position: relative;
 }
 
 header.main-header {
     grid-area: sidebar;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     background-color: #f7f6ff;
     display: flex;
     flex-direction: column;
@@ -47,7 +51,6 @@ header.main-header {
 .nav-element {
     display: grid;
     grid-template-columns: 25px auto;
-    width: 100%;
     padding: 16px 32px;
     margin-left: 11px;
     gap: 15px;
@@ -87,13 +90,16 @@ header.main-header {
 }
 
 footer {
-    grid-area: footer;
     display: flex;
     flex-direction: column;
+    position: absolute;
     background-color: #ebeef5;
     text-align: center;
     height: 35px;
+    width: 60%;
     color: var(--active-color);
+    bottom: 0;
+    left: calc(100vw - 80%);
 }
 
 footer .copyright {
@@ -106,5 +112,5 @@ footer .divider {
     align-self: center;
     height: 2px;
     background-color: var(--active-color);
-    width: 30%;
+    width: 40%;
 }
