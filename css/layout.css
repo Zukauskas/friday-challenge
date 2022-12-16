@@ -20,6 +20,7 @@ header.main-header {
 .logo {
     padding: 52px 16px 24px;
     width: max-content;
+    align-self: center;
 }
 
 .main-nav .divider {
@@ -44,11 +45,16 @@ header.main-header {
 }
 
 .nav-element {
-    display: flex;
-    justify-content: start;
+    display: grid;
+    grid-template-columns: 25px auto;
+    width: 100%;
     padding: 16px 32px;
     margin-left: 11px;
-    gap: 19px;
+    gap: 15px;
+}
+
+.nav-icon {
+    justify-self: center;
 }
 
 .main-header .nav-link {
@@ -60,6 +66,10 @@ header.main-header {
     text-decoration: none;
     color: var(--not-active-color);
     align-self: center;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
 }
 
 .nav-element.active {
