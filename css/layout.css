@@ -1,7 +1,7 @@
 body {
     display: grid;
     grid-template-columns: max-content 1fr;
-    grid-template-rows: auto;
+    grid-template-rows: 1fr max-content;
     grid-template-areas:
         "sidebar main"
         "sidebar footer";
@@ -9,7 +9,6 @@ body {
 }
 
 header.main-header {
-    position: relative;
     grid-area: sidebar;
     background-color: #f7f6ff;
     display: flex;
@@ -20,7 +19,7 @@ header.main-header {
     padding: 52px 16px 24px;
 }
 
-.divider {
+.main-nav .divider {
     height: 2px;
     background-color: var(--not-active-color);
     width: 60%;
@@ -41,7 +40,6 @@ header.main-header {
 }
 
 .nav-icon {
-    width: 25px;
 }
 
 .nav-link {
@@ -63,6 +61,23 @@ header.main-header {
 
 footer {
     grid-area: footer;
+    display: flex;
+    flex-direction: column;
     background-color: #ebeef5;
-    max-height: max-content;
+    text-align: center;
+    height: 35px;
+    color: var(--active-color);
+}
+
+footer .copyright {
+    margin-top: 11px;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+footer .divider {
+    align-self: center;
+    height: 2px;
+    background-color: var(--active-color);
+    width: 30%;
 }
