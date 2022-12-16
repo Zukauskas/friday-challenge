@@ -1,0 +1,27 @@
+body {
+    display: flex;
+}
+
+body > .main-header {
+    display: flex;
+    flex-direction: column;
+    background-color: #f7f6ff;
+    height: 100vh;
+}
+
+.logo {
+    padding: 44px 31px 32px;
+    margin: 0 31px;
+    border-bottom: 2px solid var(--not-active-color);
+}
+
+.main-nav {
+}
+
+.nav-element {
+}
+
+.main-content,
+footer {
+    background-color: #ebeef5;
+}
