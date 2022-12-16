@@ -13,10 +13,13 @@ header.main-header {
     background-color: #f7f6ff;
     display: flex;
     flex-direction: column;
+    width: 100px;
+    transition: width 1s;
 }
 
 .logo {
     padding: 52px 16px 24px;
+    width: max-content;
 }
 
 .main-nav .divider {
@@ -32,18 +35,31 @@ header.main-header {
     gap: 34px;
 }
 
+.main-header:hover .nav-link {
+    opacity: 1;
+}
+
+.main-header:hover {
+    width: 200px;
+}
+
 .nav-element {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     padding: 16px 32px;
     margin-left: 11px;
+    gap: 19px;
 }
 
-.nav-icon {
-}
-
-.nav-link {
-    display: none;
+.main-header .nav-link {
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity 2s;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--not-active-color);
+    align-self: center;
 }
 
 .nav-element.active {
@@ -52,6 +68,7 @@ header.main-header {
 }
 
 .nav-element.active .nav-link {
+    color: var(--active-color);
 }
 
 .main-content {
