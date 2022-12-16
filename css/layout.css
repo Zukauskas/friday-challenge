@@ -1,12 +1,11 @@
 body {
     display: flex;
+    height: 100vh;
 }
 
-body > .main-header {
-    display: flex;
-    flex-direction: column;
+header.main-header {
     background-color: #f7f6ff;
-    height: 100vh;
+    box-shadow: 10px 10px black;
 }
 
 .logo {
@@ -16,9 +15,16 @@ body > .main-header {
 }
 
 .main-nav {
+    display: flex;
+    flex-direction: column;
 }
 
 .nav-element {
+    display: flex;
+    justify-content: left;
+    padding: 20px 20px;
+    margin-left: 10px;
+    gap: 20px;
 }
 
 .main-content,
