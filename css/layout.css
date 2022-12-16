@@ -37,7 +37,7 @@ header.main-header {
 .main-nav {
     display: flex;
     flex-direction: column;
-    gap: 34px;
+    gap: 16px;
 }
 
 .main-header:hover .nav-link {
@@ -110,7 +110,7 @@ footer .copyright {
 
 footer .divider {
     align-self: center;
-    height: 2px;
+    height: 1px;
     background-color: var(--active-color);
     width: 40%;
 }
