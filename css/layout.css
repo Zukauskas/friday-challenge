@@ -5,7 +5,7 @@ body {
     grid-template-areas:
         "sidebar main"
         "sidebar main";
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
 }
 
@@ -86,14 +86,14 @@ header.main-header {
 
 .main-content {
     grid-area: main;
-    background-color: #ebeef5;
+    background-color: var(--main-background);
 }
 
 footer {
     display: flex;
     flex-direction: column;
     position: absolute;
-    background-color: #ebeef5;
+    background-color: var(--main-background);
     text-align: center;
     height: 35px;
     width: 60%;
